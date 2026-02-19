@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio profesional — Desarrollador de software especializado en Python, C++, APIs y metodologías ágiles." />
+  <title>Tu Nombre — Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans (limpia, moderna) + JetBrains Mono (código) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       PANTALLA DE BIENVENIDA (intro overlay)
+       Se muestra al cargar, se desvanece a los ~2.4s
+  ============================================================ -->
+  <div class="intro" id="intro">
+    <div class="intro__content">
+      <span class="intro__hello">Bienvenido</span>
+      <div class="intro__line"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVEGACIÓN
+  ============================================================ -->
+  <nav class="nav" id="navbar">
+    <a href="#hero" class="nav__logo">
+      <span class="bracket">&lt;</span>dev<span class="bracket">/&gt;</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menú">
+      <i class="ph ph-list"></i>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#skills"   class="nav__link">Habilidades</a></li>
+      <li><a href="#projects" class="nav__link">Proyectos</a></li>
+      <li><a href="#about"    class="nav__link">Sobre mí</a></li>
+      <li><a href="#contact"  class="nav__link nav__link--cta">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       HERO — Nombre centrado + lenguajes rotatorios
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Fondo: grid + resplandores azul marino -->
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__glow hero__glow--3"></div>
+    </div>
+
+    <div class="hero__content">
+      <!-- Nombre centrado -->
+      <p class="hero__eyebrow">Hola, soy</p>
+      <h1 class="hero__name">
+        <span class="hero__name-first">Tu</span>
+        <span class="hero__name-last">Nombre</span>
+      </h1>
+
+      <!-- Tecnologías que rotan en una cinta horizontal -->
+      <div class="hero__tech-row" aria-label="Tecnologías">
+        <span class="tech-pill active" data-index="0">Python</span>
+        <span class="tech-pill" data-index="1">C++</span>
+        <span class="tech-pill" data-index="2">Pruebas Unitarias</span>
+        <span class="tech-pill" data-index="3">Conexión de APIs</span>
+        <span class="tech-pill" data-index="4">Scrum</span>
+        <span class="tech-pill" data-index="5">Git</span>
+      </div>
+
+      <!-- Tagline breve -->
+      <p class="hero__tagline">
+        Construyo software confiable,<br />bien testeado y colaborativo.
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero__ctas">
+        <a href="#projects" class="btn btn--primary">
+          Ver proyectos <i class="ph ph-arrow-down"></i>
+        </a>
+        <a href="#about" class="btn btn--ghost">
+          Sobre mí <i class="ph ph-user"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-label">scroll</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HABILIDADES  (primera sección de contenido)
+  ============================================================ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag">01 — Habilidades</span>
+        <h2 class="section-title">Stack & Competencias</h2>
+      </header>
+
+      <div class="skills__bento">
+
+        <!-- Lenguajes de programación -->
+        <div class="bento-card bento-card--wide reveal">
+          <div class="bento-card__label"><i class="ph ph-code"></i> Lenguajes</div>
+          <div class="lang-grid">
+            <div class="lang-item">
+              <span class="lang-icon">🐍</span>
+              <span class="lang-name">Python</span>
+              <div class="lang-bar"><span style="--w:90%"></span></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-icon">⚡</span>
+              <span class="lang-name">C++</span>
+              <div class="lang-bar"><span style="--w:75%"></span></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-icon">🌐</span>
+              <span class="lang-name">JavaScript</span>
+              <div class="lang-bar"><span style="--w:70%"></span></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-icon">🔷</span>
+              <span class="lang-name">SQL</span>
+              <div class="lang-bar"><span style="--w:80%"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testing -->
+        <div class="bento-card reveal">
+          <div class="bento-card__label"><i class="ph ph-test-tube"></i> Testing</div>
+          <p class="bento-card__desc">Pruebas unitarias, de integración y TDD para garantizar código confiable desde el primer commit.</p>
+          <div class="bento-card__tags">
+            <span>pytest</span><span>unittest</span><span>Jest</span><span>TDD</span>
+          </div>
+        </div>
+
+        <!-- APIs -->
+        <div class="bento-card reveal">
+          <div class="bento-card__label"><i class="ph ph-plugs-connected"></i> APIs</div>
+          <p class="bento-card__desc">Diseño e integración de APIs REST. Autenticación, manejo de errores y documentación con Swagger.</p>
+          <div class="bento-card__tags">
+            <span>REST</span><span>FastAPI</span><span>Postman</span><span>OAuth</span>
+          </div>
+        </div>
+
+        <!-- Scrum / Metodologías -->
+        <div class="bento-card reveal">
+          <div class="bento-card__label"><i class="ph ph-users-three"></i> Metodologías</div>
+          <p class="bento-card__desc">Experiencia en equipos ágiles: sprints, daily standups, retrospectivas y entrega continua.</p>
+          <div class="bento-card__tags">
+            <span>Scrum</span><span>Kanban</span><span>Jira</span><span>CI/CD</span>
+          </div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="bento-card bento-card--accent reveal">
+          <div class="bento-card__label"><i class="ph ph-wrench"></i> Herramientas</div>
+          <div class="tools-row">
+            <span><i class="ph ph-git-branch"></i>Git</span>
+            <span><i class="ph ph-github-logo"></i>GitHub</span>
+            <span><i class="ph ph-cube"></i>Docker</span>
+            <span><i class="ph ph-database"></i>PostgreSQL</span>
+            <span><i class="ph ph-linux-logo"></i>Linux</span>
+            <span><i class="ph ph-figma-logo"></i>Figma</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROYECTOS (segunda sección)
+  ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag">02 — Proyectos</span>
+        <h2 class="section-title">Trabajo seleccionado</h2>
+      </header>
+
+      <div class="projects__grid">
+
+        <!-- Proyecto 1 -->
+        <article class="project-card reveal">
+          <div class="project-card__num">01</div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">API de Gestión de Inventario</h3>
+            <p class="project-card__desc">
+              Backend REST completo para control de inventario con autenticación JWT,
+              reportes en PDF y suite de pruebas unitarias con cobertura del 90%.
+            </p>
+            <div class="project-card__tags">
+              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>pytest</span>
+            </div>
+          </div>
+          <div class="project-card__actions">
+            <a href="#" class="btn btn--small btn--primary">Demo <i class="ph ph-arrow-square-out"></i></a>
+            <a href="#" class="btn btn--small btn--ghost">Código <i class="ph ph-github-logo"></i></a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="project-card reveal">
+          <div class="project-card__num">02</div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">Simulador de Algoritmos</h3>
+            <p class="project-card__desc">
+              Herramienta en C++ para visualizar y comparar algoritmos de ordenamiento
+              y búsqueda. Incluye benchmarks de rendimiento y exportación de resultados.
+            </p>
+            <div class="project-card__tags">
+              <span>C++</span><span>Algoritmos</span><span>CLI</span><span>Benchmarking</span>
+            </div>
+          </div>
+          <div class="project-card__actions">
+            <a href="#" class="btn btn--small btn--primary">Demo <i class="ph ph-arrow-square-out"></i></a>
+            <a href="#" class="btn btn--small btn--ghost">Código <i class="ph ph-github-logo"></i></a>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="project-card reveal">
+          <div class="project-card__num">03</div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">Dashboard de Métricas Scrum</h3>
+            <p class="project-card__desc">
+              Aplicación web para visualizar velocidad de sprints, burndown charts y
+              KPIs de equipo. Integrado con Jira mediante su API REST.
+            </p>
+            <div class="project-card__tags">
+              <span>Python</span><span>JavaScript</span><span>Jira API</span><span>Charts.js</span>
+            </div>
+          </div>
+          <div class="project-card__actions">
+            <a href="#" class="btn btn--small btn--primary">Demo <i class="ph ph-arrow-square-out"></i></a>
+            <a href="#" class="btn btn--small btn--ghost">Código <i class="ph ph-github-logo"></i></a>
+          </div>
+        </article>
+
+        <!-- Proyecto 4 -->
+        <article class="project-card reveal">
+          <div class="project-card__num">04</div>
+          <div class="project-card__body">
+            <h3 class="project-card__name">Bot de Notificaciones</h3>
+            <p class="project-card__desc">
+              Microservicio que conecta múltiples APIs externas (Slack, Telegram, Email)
+              para envío automatizado de alertas según reglas configurables.
+            </p>
+            <div class="project-card__tags">
+              <span>Python</span><span>REST APIs</span><span>Docker</span><span>Webhooks</span>
+            </div>
+          </div>
+          <div class="project-card__actions">
+            <a href="#" class="btn btn--small btn--primary">Demo <i class="ph ph-arrow-square-out"></i></a>
+            <a href="#" class="btn btn--small btn--ghost">Código <i class="ph ph-github-logo"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOBRE MÍ (tercera sección)
+  ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+
+      <header class="section-header reveal">
+        <span class="section-tag">03 — Sobre mí</span>
+        <h2 class="section-title">Un poco acerca de mí</h2>
+      </header>
+
+      <div class="about__layout">
+
+        <!-- Texto principal -->
+        <div class="about__main reveal">
+          <p class="about__text">
+            Soy desarrollador de software apasionado por construir soluciones sólidas
+            y bien probadas. Me especializo en Python y C++, con énfasis en calidad
+            de código, pruebas automatizadas y colaboración ágil.
+          </p>
+          <p class="about__text">
+            Disfruto trabajar en equipo bajo metodologías Scrum, siempre buscando
+            entregar software confiable que aporte valor real al usuario final.
+          </p>
+        </div>
+
+        <!-- Datos rápidos -->
+        <div class="about__sidebar reveal">
+          <div class="about__fact">
+            <span class="about__fact-num">3+</span>
+            <span class="about__fact-label">Años de experiencia</span>
+          </div>
+          <div class="about__fact">
+            <span class="about__fact-num">10+</span>
+            <span class="about__fact-label">Proyectos completados</span>
+          </div>
+          <div class="about__fact">
+            <span class="about__fact-num">90%</span>
+            <span class="about__fact-label">Cobertura de tests promedio</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACTO
+  ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__card reveal">
+        <span class="section-tag">04 — Contacto</span>
+        <h2 class="contact__title">¿Trabajamos juntos?</h2>
+        <p class="contact__lead">
+          Disponible para proyectos freelance, colaboraciones o posiciones full-time.
+        </p>
+        <div class="contact__links">
+          <a href="mailto:hola@tunombre.dev" class="contact-link">
+            <i class="ph ph-envelope-simple"></i>
+            <span>hola@tunombre.dev</span>
+            <i class="ph ph-arrow-right contact-link__arrow"></i>
+          </a>
+          <a href="https://github.com/tunombre" target="_blank" rel="noopener" class="contact-link">
+            <i class="ph ph-github-logo"></i>
+            <span>github.com/tunombre</span>
+            <i class="ph ph-arrow-right contact-link__arrow"></i>
+          </a>
+          <a href="https://linkedin.com/in/tunombre" target="_blank" rel="noopener" class="contact-link">
+            <i class="ph ph-linkedin-logo"></i>
+            <span>linkedin.com/in/tunombre</span>
+            <i class="ph ph-arrow-right contact-link__arrow"></i>
+          </a>
+        </div>
+        <a href="mailto:hola@tunombre.dev" class="btn btn--primary btn--large">
+          Enviar mensaje <i class="ph ph-paper-plane-tilt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">
+          <span class="bracket">&lt;</span>dev<span class="bracket">/&gt;</span>
+        </span>
+        <p class="footer__copy">© <span id="year"></span> Tu Nombre</p>
+        <a href="#hero" class="footer__top" aria-label="Volver arriba">
+          <i class="ph ph-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
